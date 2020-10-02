@@ -70,6 +70,16 @@ button[type="submit"] {
 	border-bottom: 5px solid rgb(155, 0, 0);
 }
 
-#order-row {
+.order-row {
 	margin-top: -10px;
+}
+
+.deals-row {
+	margin-top: 10px;
+}
+
+#deals-row {
+	border: 2px solid rgb(155, 0, 0);
+	border-radius: 10px;
+	padding: 10px 20px 10px 10px;
 }
