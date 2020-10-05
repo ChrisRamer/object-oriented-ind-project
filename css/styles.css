@@ -83,3 +83,11 @@ button[type="submit"] {
 	border-radius: 10px;
 	padding: 10px 20px 10px 10px;
 }
+
+#deliveryForm {
+	display: none;
+	border: 2px solid rgb(155, 0, 0);
+	border-radius: 10px;
+	padding: 5px 5px 5px 5px;
+	margin-top: 15px;
+}
