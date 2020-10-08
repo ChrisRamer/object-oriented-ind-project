@@ -1,6 +1,6 @@
 // Business Logic
 
-const tax = 1234567890;
+const deliveryFee = 420;
 
 function Pizza() {
 	this.size = "Large";
@@ -15,20 +15,20 @@ Pizza.prototype.makePizza = function(size, toppings, crust) {
 }
 
 Pizza.prototype.getPrice = function() {
-	let price;
+	let price = 0;
 
 	switch (this.size) {
-		case Small:
+		case "Small":
 			price += 500;
 			break;
-		case Medium:
+		case "Medium":
 			price += 1000;
 			break;
-		case Large:
+		case "Large":
 			price += 2000;
 			break;
-		case ExtraLarge:
-			price += 99999999;
+		case "ExtraLarge":
+			price += 5000;
 			break;
 	}
 
@@ -36,7 +36,19 @@ Pizza.prototype.getPrice = function() {
 		price += 1000;
 	}
 
-	return price;
+	switch (this.crust) {
+		case "Regular":
+			price += 250;
+			break;
+		case "Thick":
+			price += 750;
+			break;
+		case "Thin":
+			price += 500;
+			break;
+	}
+
+	return price + deliveryFee;
 }
 
 function ShowDeliveryForm() {
@@ -60,5 +72,22 @@ $(document).ready(function () {
 		const toppings = $("#pizzaToppingsInput").val();
 		const crust = $("#pizzaCrustInput").val();
 		pizza.makePizza(size, toppings, crust);
+		$("#deliveryForm").hide();
+		$("#paymentForm").show();
+		$("#pizzaSize").text("Size: " + pizza.size + " Rupees");
+		$("#pizzaToppings").text("Toppings:  " + pizza.toppings + " Rupees");
+		$("#pizzaCrust").text("Crust: " + pizza.crust + " Rupees");
+		$("#taxCost").text("Delivery: $" + deliveryFee + " Rupeess");
+		$("#totalCost").text("Total: " + pizza.getPrice() + " Rupees");
+	});
+
+	$("#confirmPayment").click(function (e) { 
+		e.preventDefault();
+		$("#paymentForm").hide();
+		$("#confirmation").show();
+	});
+
+	$("#toHome").click(function (e) { 
+		location.reload();
 	});
 });

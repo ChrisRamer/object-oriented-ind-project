@@ -69,30 +69,30 @@
 				<div class="col-sm-4">
 					<p>Size</p>
 					<select class="form-control" id="pizzaSizeInput">
-						<option value="Small">Small</option>
-						<option value="Medium">Medium</option>
-						<option value="Large" selected>Large</option>
-						<option value="ExtraLarge">Extra Large</option>
+						<option value="Small">Small - 500 Rupees</option>
+						<option value="Medium">Medium - 1000 Rupees</option>
+						<option value="Large" selected>Large - 2000 Rupees</option>
+						<option value="ExtraLarge">Extra Large - 5000 Rupees</option>
 					</select>
 				</div>
 				<div class="col-sm-4">
 					<p>Toppings</p>
 					<select class="form-control" id="pizzaToppingsInput">
 						<option vlaue="NULL" selected>Please select...</option>
-						<option value="Pepperoni">Pepperoni - $1,000</option>
-						<option value="Olives">Olives - $1,000</option>
-						<option value="Mushroom">Mushroom - $1000</option>
-						<option value="Pineapple">Pineapple - $1000</option>
-						<option value="Sausage">Sausage - $1000</option>
-						<option value="IceCream">Ice Cream - $1000</option>
+						<option value="Pepperoni">Pepperoni - 1000 Rupees</option>
+						<option value="Olives">Olives - 1000 Rupees</option>
+						<option value="Mushroom">Mushroom - 1000 Rupees</option>
+						<option value="Pineapple">Pineapple - 1000 Rupees</option>
+						<option value="Sausage">Sausage - 1000 Rupees</option>
+						<option value="IceCream">Ice Cream - 1000 Rupees</option>
 					</select>
 				</div>
 			<div class="col-sm-4">
 				<p>Crust Style</p>
 				<select class="form-control" id="pizzaCrustInput">
-					<option value="Regular">Regular</option>
-					<option value="Thick">Thick Crust</option>
-					<option value="Thin">Thin Crust</option>
+					<option value="Regular">Regular - 250 Rupees</option>
+					<option value="Thick">Thick Crust - 750 Rupees</option>
+					<option value="Thin">Thin Crust - 500 Rupees</option>
 				</select>
 			</div>
 			</div>
@@ -205,6 +205,25 @@
 			</div>
 			<button type="submit" class="btn">Place order!</button>
 		</form>
+	</div>
+
+	<!-- Payment -->
+	<div id="paymentForm" class="container">
+		<h2 style="padding-bottom: 20px">Payment</h2>
+		<p id="pizzaSize"></p>
+		<p id="pizzaToppings"></p>
+		<p id="pizzaCrust"></p>
+		<p id="taxCost"></p>
+		<p>_________________</p>
+		<p id="totalCost"></p>
+		<button id="confirmPayment" type="submit" class="btn">Confirm order!</button>
+	</div>
+
+	<!-- Confirmation -->
+	<div id="confirmation" class="container">
+		<h2 style="padding-bottom: 20px">Your pizza is in the oven!</h2>
+		<p>Expected time: 2 years</p>
+		<button id="toHome" type="submit" class="btn">Return to home page</button>
 	</div>
 
 </body>
