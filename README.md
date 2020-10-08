@@ -16,9 +16,13 @@ Open the folder named *"object-oriented-js-ind-project"* and double click `index
 
 ## Specs
 
-* **Spec:**
-* **Input:** 
-* **Output:** 
+* **Spec:** Delivery form
+* **Input:** Click "Delivery" button
+* **Output:** Starts delivery form
+
+* **Spec:**  Pickup form
+* **Input:**  Click "Pickup" button
+* **Output:** Starts pickup form
 
 ## Technologies Used
 
