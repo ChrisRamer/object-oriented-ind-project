@@ -51,9 +51,30 @@ Pizza.prototype.getPrice = function() {
 	return price + deliveryFee;
 }
 
-function ShowDeliveryForm() {
+function ShowPizzaForm(form) {
 	$(".deals-row").hide();
-	$("#deliveryForm").fadeIn(500);
+	$(".order-row").hide();
+	if (form === "deliver") {
+		$("#deliveryForm").fadeIn(500);
+	}
+	else if (form  === "pickup") {
+		$("#pickupForm").fadeIn(500);
+	}
+}
+
+function OrderPizza() {
+	const size = $("#pizzaSizeInput").val();
+	const toppings = $("#pizzaToppingsInput").val();
+	const crust = $("#pizzaCrustInput").val();
+	pizza.makePizza(size, toppings, crust);
+	$("#deliveryForm").hide();
+	$("#pickupForm").hide();
+	$("#paymentForm").show();
+	$("#pizzaSize").text("Size: " + pizza.size);
+	$("#pizzaToppings").text("Toppings:  " + pizza.toppings);
+	$("#pizzaCrust").text("Crust: " + pizza.crust);
+	$("#taxCost").text("Delivery: $" + deliveryFee + " Rupeess");
+	$("#totalCost").text("Total: " + pizza.getPrice() + " Rupees");
 }
 
 // User interface logic
@@ -63,22 +84,22 @@ let pizza = new Pizza();
 $(document).ready(function () {
 	$("#deliver").click(function (e) { 
 		e.preventDefault();
-		ShowDeliveryForm();
+		ShowPizzaForm("deliver");
+	});
+
+	$("#pickup").click(function (e) { 
+		e.preventDefault();
+		ShowPizzaForm("pickup");
 	});
 
 	$("#dilivery-form").submit(function (e) { 
 		e.preventDefault();
-		const size = $("#pizzaSizeInput").val();
-		const toppings = $("#pizzaToppingsInput").val();
-		const crust = $("#pizzaCrustInput").val();
-		pizza.makePizza(size, toppings, crust);
-		$("#deliveryForm").hide();
-		$("#paymentForm").show();
-		$("#pizzaSize").text("Size: " + pizza.size + " Rupees");
-		$("#pizzaToppings").text("Toppings:  " + pizza.toppings + " Rupees");
-		$("#pizzaCrust").text("Crust: " + pizza.crust + " Rupees");
-		$("#taxCost").text("Delivery: $" + deliveryFee + " Rupeess");
-		$("#totalCost").text("Total: " + pizza.getPrice() + " Rupees");
+		OrderPizza();
+	});
+
+	$("#pickup-form").submit(function (e) { 
+		e.preventDefault();
+		OrderPizza();
 	});
 
 	$("#confirmPayment").click(function (e) { 

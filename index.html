@@ -21,8 +21,8 @@
 	</div>
 
 	<!-- Order pizza row -->
+	<p><b>Due to Coronavirus, we are not allowing eating at our pizzarias. Because of this, we have discounted prices for delivery and pickup!</b></p>
 	<div class="order-row">
-		<p><b>Due to Coronavirus, we are not allowing eating at our pizzarias. Because of this, we have discounted prices for delivery and pickup!</b></p>
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-4">
@@ -200,6 +200,70 @@
 					<div class="form-group">
 						<label for="phoneNumberInput">Phone Number</label>
 						<input type="tel" class="form-control" id="phoneNumberInput" aria-describedby="phoneNumberSubmit" placeholder="(123) 456-7890">
+					</div>
+				</div>
+			</div>
+			<button type="submit" class="btn">Place order!</button>
+		</form>
+	</div>
+
+	<!-- Pickup form -->
+	<div id="pickupForm" class="container">
+		<h2 style="padding-bottom: 20px">Pickup Your Pizza</h2>
+		<form id="pickup-form">
+			<!-- Pizza row -->
+			<h4>Describe your perfect pizza</h4>
+			<div class="row">
+				<div class="col-sm-4">
+					<p>Size</p>
+					<select class="form-control" id="pizzaSizeInput">
+						<option value="Small">Small - 500 Rupees</option>
+						<option value="Medium">Medium - 1000 Rupees</option>
+						<option value="Large" selected>Large - 2000 Rupees</option>
+						<option value="ExtraLarge">Extra Large - 5000 Rupees</option>
+					</select>
+				</div>
+				<div class="col-sm-4">
+					<p>Toppings</p>
+					<select class="form-control" id="pizzaToppingsInput">
+						<option vlaue="NULL" selected>Please select...</option>
+						<option value="Pepperoni">Pepperoni - 1000 Rupees</option>
+						<option value="Olives">Olives - 1000 Rupees</option>
+						<option value="Mushroom">Mushroom - 1000 Rupees</option>
+						<option value="Pineapple">Pineapple - 1000 Rupees</option>
+						<option value="Sausage">Sausage - 1000 Rupees</option>
+						<option value="IceCream">Ice Cream - 1000 Rupees</option>
+					</select>
+				</div>
+				<div class="col-sm-4">
+					<p>Crust Style</p>
+					<select class="form-control" id="pizzaCrustInput">
+						<option value="Regular">Regular - 250 Rupees</option>
+						<option value="Thick">Thick Crust - 750 Rupees</option>
+						<option value="Thin">Thin Crust - 500 Rupees</option>
+					</select>
+				</div>
+			</div>
+			<!-- Contact row -->
+			<h4>How should we contact you?</h4>
+			<small lass="form-text text-muted">We will only contact you for important updates regarding your
+				delivery</small>
+			<div class="row" style="padding-top: 10px">
+				<div class="col-sm-5">
+					<div class="form-group">
+						<label for="emailInput">Email Address</label>
+						<input type="email" class="form-control" id="emailInput" aria-describedby="emailSubmit"
+							placeholder="email@gmail.com">
+					</div>
+				</div>
+				<div class="col-sm-2">
+					<p style="padding-top: 30px"><i>OR</i></p>
+				</div>
+				<div class="col-sm-5">
+					<div class="form-group">
+						<label for="phoneNumberInput">Phone Number</label>
+						<input type="tel" class="form-control" id="phoneNumberInput" aria-describedby="phoneNumberSubmit"
+							placeholder="(123) 456-7890">
 					</div>
 				</div>
 			</div>
