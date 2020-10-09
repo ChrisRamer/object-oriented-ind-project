@@ -16,13 +16,9 @@ Open the folder named *"object-oriented-js-ind-project"* and double click `index
 
 ## Specs
 
-* **Spec:** Delivery form
-* **Input:** Click "Delivery" button
-* **Output:** Starts delivery form
-
-* **Spec:**  Pickup form
-* **Input:**  Click "Pickup" button
-* **Output:** Starts pickup form
+* **Spec:** Takes inputs from user to build pizza constructor and calculates a total cost
+* **Input:** Size: "Large", Toppings: "Pepperoni", Crust: "Thick"
+* **Output:** Total: 12170 Rupees
 
 ## Technologies Used
 
